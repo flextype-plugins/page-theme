@@ -1,0 +1,13 @@
+name: Page Theme
+version: 1.0.0
+description: "Page Theme plugin enables you use different themes per pages."
+author:
+  name: Sergey Romanenko
+  email: awilum@yandex.ru
+  url: http://flextype.org
+homepage: https://github.com/flextype-plugins/page-theme
+bugs: https://github.com/flextype-plugins/page-theme/issues
+license: MIT
+
+# Plugin settings
+enabled: true
