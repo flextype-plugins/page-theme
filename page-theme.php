@@ -20,6 +20,6 @@ Event::addListener('onCurrentPageBeforeDisplayed', function () {
     $page = Content::getCurrentPage();
 
     if (isset($page['theme'])) {
-        Registry::set('site.theme', $page['theme']);
+        Registry::set('system.theme', $page['theme']);
     }
 });
