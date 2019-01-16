@@ -17,7 +17,7 @@ use Flextype\Component\{Event\Event, Registry\Registry};
 
 // Event: onCurrentPageBeforeDisplayed
 Event::addListener('onCurrentPageBeforeDisplayed', function () {
-    $page = Content::getCurrentPage();
+    $page = Entries::getCurrentPage();
 
     if (isset($page['theme'])) {
         Registry::set('system.theme', $page['theme']);
