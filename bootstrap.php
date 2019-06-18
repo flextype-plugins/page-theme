@@ -13,13 +13,11 @@
 
 namespace Flextype;
 
-use Flextype\Component\{Event\Event, Registry\Registry};
+$flextype->emitter->addListener('onSiteEntryAfterInitialized', function() use ($flextype) {
 
-// Event: onCurrentPageBeforeDisplayed
-Event::addListener('onCurrentPageBeforeDisplayed', function () {
-    $page = Entries::getCurrentPage();
+    $entry = $flextype->SiteController->entry;
 
-    if (isset($page['theme'])) {
-        Registry::set('system.theme', $page['theme']);
+    if (isset($entry['theme'])) {
+        $flextype->registry->set('settings.theme', $entry['theme']);
     }
 });
